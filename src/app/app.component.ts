@@ -15,15 +15,20 @@ export class AppComponent {
     lastName: 'Ayoola',
     sex: 'Male',
   };
+
+  isUserLoggedIn = true;
   success_msg = true;
   success_flag = true;
   superPower = 'wonderWoman';
   c3 = 'c3';
   condition = 'c4';
+  imgUrl = 'test.png';
+  imgAlt = 'no image';
+  number = 'number';
 
   contacts = [
-    { firstname: 'ABC', lastName: 'DEF', contactId: 123 },
-    { firstname: 'CAB', lastName: 'JED', contactId: 1234 },
-    { firstname: 'BAC', lastName: 'FAD', contactId: 12345 },
+    { firstname: 'Cristaiano', lastName: 'Ronaldo', contactId: 123 },
+    { firstname: 'Wayne', lastName: 'Rooney', contactId: 1234 },
+    { firstname: 'Dimitri', lastName: 'Berbatove', contactId: 12345 },
   ];
 }
