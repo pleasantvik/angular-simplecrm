@@ -25,10 +25,17 @@ export class AppComponent {
   imgUrl = 'test.png';
   imgAlt = 'no image';
   number = 'number';
+  colVal = '2';
 
   contacts = [
     { firstname: 'Cristaiano', lastName: 'Ronaldo', contactId: 123 },
     { firstname: 'Wayne', lastName: 'Rooney', contactId: 1234 },
     { firstname: 'Dimitri', lastName: 'Berbatove', contactId: 12345 },
   ];
+
+  sayHello() {
+    console.log({ contacts: this.contacts });
+  }
+
+  username = 'Arc Tutorial';
 }

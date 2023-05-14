@@ -8,6 +8,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { ProfileModule } from './profile/profile.module';
 import { HighlightDirective } from './highlight.directive';
 import { UsersComponent } from './users/users.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, HighlightDirective, UsersComponent],
@@ -16,6 +17,7 @@ import { UsersComponent } from './users/users.component';
     AppRoutingModule,
     MatButtonModule,
     BrowserAnimationsModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

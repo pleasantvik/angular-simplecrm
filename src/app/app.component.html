@@ -1,5 +1,8 @@
 <h1 class="">{{ title }}</h1>
-<h2 class="">{{ page_heading }}</h2>
+
+<input [(ngModel)]="username" />
+<div>{{ username }}</div>
+<!-- <h2 class="">{{ page_heading }}</h2>
 <p class="">{{ page_count }}</p>
 <p>{{ user_obj.firstName }}</p>
 <p *ngIf="isUserLoggedIn">{{ user_obj.firstName }}</p>
@@ -15,7 +18,7 @@
   <tbody>
     <tr *ngFor="let contact of contacts">
       <td [title]="contact.contactId">{{ contact.contactId }}</td>
-      <td>{{ contact.firstname }}</td>
+      <td [attr.colspan]="colVal">{{ contact.firstname }}</td>
       <td>{{ contact.lastName }}</td>
     </tr>
   </tbody>
@@ -24,14 +27,17 @@
 <div [ngSwitch]="isUserLoggedIn">
   <div *ngSwitchCase="true">Sex: {{ user_obj.sex }}</div>
   <div *ngSwitchCase="'batMan'">Display batMan</div>
-</div>
+</div> -->
 
 <!-- Property Binding -->
-<div *ngIf="isUserLoggedIn">
+<!-- <div *ngIf="isUserLoggedIn">
   <h1 [innerHTML]="user_obj.firstName"></h1>
 </div>
 <img [src]="imgUrl" [alt]="imgAlt" />
 <input [type]="number" />
+
+<button (click)="sayHello()">Click me</button> -->
+
 <!-- <app-list-profile></app-list-profile> -->
 <!-- ngIf with OR operator -->
 <!-- <div *ngIf="success_msg || success_flag" style="background-color: aquamarine">
