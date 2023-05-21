@@ -9,9 +9,20 @@ import { ProfileModule } from './profile/profile.module';
 import { HighlightDirective } from './highlight.directive';
 import { UsersComponent } from './users/users.component';
 import { FormsModule } from '@angular/forms';
+import { LoansComponent } from './loans/loans.component';
+import { LoanTypesComponent } from './loan-types/loan-types.component';
+import { AddLoanComponent } from './add-loan/add-loan.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
-  declarations: [AppComponent, HighlightDirective, UsersComponent],
+  declarations: [
+    AppComponent,
+    HighlightDirective,
+    UsersComponent,
+    LoansComponent,
+    LoanTypesComponent,
+    AddLoanComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -19,7 +30,12 @@ import { FormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: LocationStrategy,
+      useClass: HashLocationStrategy,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
