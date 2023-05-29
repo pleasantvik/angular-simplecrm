@@ -12,7 +12,13 @@ import { FormsModule } from '@angular/forms';
 import { LoansComponent } from './loans/loans.component';
 import { LoanTypesComponent } from './loan-types/loan-types.component';
 import { AddLoanComponent } from './add-loan/add-loan.component';
-import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { LocationStrategy, PathLocationStrategy } from '@angular/common';
+
+import { ProductComponent } from './product/product.component';
+import { ClientsComponent } from './clients/clients.component';
+import { SearchComponent } from './search/search.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { CustomersComponent } from './customers/customers.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +28,11 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     LoansComponent,
     LoanTypesComponent,
     AddLoanComponent,
+    ProductComponent,
+    ClientsComponent,
+    SearchComponent,
+    PageNotFoundComponent,
+    CustomersComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,7 +44,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
   providers: [
     {
       provide: LocationStrategy,
-      useClass: HashLocationStrategy,
+      useClass: PathLocationStrategy,
     },
   ],
   bootstrap: [AppComponent],

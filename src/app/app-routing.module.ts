@@ -3,20 +3,31 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoansComponent } from './loans/loans.component';
 import { LoanTypesComponent } from './loan-types/loan-types.component';
 import { AddLoanComponent } from './add-loan/add-loan.component';
+import { ProductComponent } from './product/product.component';
+import { ClientsComponent } from './clients/clients.component';
+import { SearchComponent } from './search/search.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {
-    path: 'loans',
-    component: LoansComponent,
+    path: 'product/:id',
+    component: ProductComponent,
   },
   {
-    path: 'loan-types',
-    component: LoanTypesComponent,
+    path: 'product/:productId/photos/:photoId',
+    component: ProductComponent,
   },
   {
-    path: 'add',
-    component: AddLoanComponent,
-    outlet: 'addLoan',
+    path: 'clients',
+    component: ClientsComponent,
+  },
+  {
+    path: 'search',
+    component: SearchComponent,
+  },
+  {
+    path: '**',
+    component: PageNotFoundComponent,
   },
 ];
 
